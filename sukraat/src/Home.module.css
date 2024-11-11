@@ -1,0 +1,97 @@
+.shimmer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+/* General shimmer styling */
+.shimmer {
+  background: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Shimmer effect animation */
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.15) 75%
+  );
+  animation: shimmer-animation 1.2s infinite;
+}
+
+/* Shimmer animation keyframes */
+@keyframes shimmer-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Placeholder sizes for different elements - Desktop view */
+.line {
+  height: 50px;
+  width: 100%;
+}
+
+.heading {
+  height: 40px;
+  width: 75%;
+  margin-bottom: 15px;
+}
+
+.paragraph {
+  height: 15px;
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+/* Tablet view adjustments */
+@media (max-width: 1024px) {
+  .line {
+    height: 30px;
+    width: 100%;
+  }
+
+  .heading {
+    height: 25px;
+    width: 80%;
+  }
+
+  .paragraph {
+    height: 12px;
+    width: 95%;
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+  .line {
+    height: 20px;
+    width: 100%;
+  }
+
+  .heading {
+    height: 13
+    px;
+    width: 85%;
+  }
+
+  .paragraph {
+    height: 10px;
+    width: 100%;
+  }
+}

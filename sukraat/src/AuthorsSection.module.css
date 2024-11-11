@@ -1,0 +1,80 @@
+:root {
+    /* Color Scheme */
+    --background-color: #0D1B2A; /* Dark Navy */
+    --body-bg-color:#f5f5f5b8 ; /* Very Light Grey for better readability */
+    --primary-text-color: #f5f5f5d4; /* Very Light Grey for better readability */
+    --secondary-text-color: #C0B283; /* Classic Gold - a richer tone */
+    --accent-color: #2A9D8F; /* Teal Green */
+    --button-bg-color: #132940; /* Deep Charcoal Blue for depth */
+    --button-hover-color: #3C5C67; /* Rich Slate Blue for elegance */
+  }
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0;
+    color: var(--button-bg-color);
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+}
+.heading::after {
+    content: ""; /* Empty element for decorative line */
+    display: block;
+    width: 60%; /* Control width of the line */
+    height: 4px; /* Line height */
+    background: var(--accent-color); /* Use accent color */
+    margin: 15px auto; /* Center and add space */
+    border-radius: 2px; /* Slightly rounded edges */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.carouselRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cardsContainer {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carouselButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: var(--primary-text-color);
+    background: var(--button-bg-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carouselButton:hover {
+    background: var(--button-hover-color);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carouselButton:disabled {
+    background: #888;
+    cursor: not-allowed;
+}
+/* Cards.module.css */
+
+

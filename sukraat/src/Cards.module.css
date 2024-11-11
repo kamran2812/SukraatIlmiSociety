@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    direction: rtl; /* Right-to-left layout for Urdu */
+    text-align: right; /* Align text to the right */
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap onto the next line */
+    justify-content: space-between; /* Distributes space evenly */
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1rem;
+    flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row with spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Add a transition effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.cardImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .cardImage {
+    transform: scale(1.1);
+}
+
+.cardContent {
+    padding: 1rem;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.cardAuthor {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-align: right; /* Align author to the right */
+}
+
+.cardDescription {
+    overflow: hidden;
+    color: #555;
+    font-size: 0.95rem;
+    margin: 10px 0;
+    text-align: right; /* Align description to the right */
+}
+
+.likesComments {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icons and counts */
+}
+
+.icon {
+    font-size: 1.2rem; /* Adjust icon size */
+    color: #777; /* Default color for icons */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transition for color change */
+}
+
+.icon:hover {
+    color: #5a5a89; /* Color change on hover */
+}
+
+.likeCount,
+.commentCount {
+    font-size: 0.9rem;
+    color: #777;
+}
+.card:hover .cardContent {
+    background-color: #f0f0f5;
+  }

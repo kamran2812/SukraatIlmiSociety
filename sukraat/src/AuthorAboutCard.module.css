@@ -1,0 +1,138 @@
+/* Responsive Card Container */
+:root {
+    /* Color Scheme */
+    --background-color: #0D1B2A; /* Dark Navy */
+    --body-bg-color:#f5f5f5b8 ; /* Very Light Grey for better readability */
+    --primary-text-color: #f5f5f5d4; /* Very Light Grey for better readability */
+    --secondary-text-color: #C0B283; /* Classic Gold - a richer tone */
+    --accent-color: #2A9D8F; /* Teal Green */
+    --button-bg-color: #132940; /* Deep Charcoal Blue for depth */
+    --button-hover-color: #3C5C67; /* Rich Slate Blue for elegance */
+  }
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    max-width: 100%; /* Responsive width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Image Container with Circular Shape */
+/* ... (rest of your CSS) */
+
+/* ... (rest of your CSS) */
+
+.imageContainer {
+    width: 120px; /* Fixed size for circular image */
+    height: 120px;
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* This is important to hide anything outside the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImage {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Ensures the image covers the whole area */
+}
+.socialLinks a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Slightly increased gap */
+    text-decoration: none;
+}
+.socialLinks a span{
+    padding: 8px 12px; /* Added padding */
+    border-radius: 20px; /* Rounded corners */
+    background-color: var(--button-bg-color); /* Use your button background color */
+    color: var(--primary-text-color); /* Use your primary text color */
+    font-weight: 500; /* Slightly bolder text */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .socialLinks a span:hover {
+    background-color: var(--button-hover-color); /* Use your button hover color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  .socialLinks a .icon {
+    font-size: 1.5rem;
+  }
+/* ... (rest of your CSS) */
+/* ... (rest of your CSS) */
+
+
+/* Card Content */
+.cardContent {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    text-align: center; /* Center-align text in smaller screens */
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.cardBio {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 10px 0;
+}
+
+/* Social Links */
+.socialLinks {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center-align icons */
+}
+
+.icon {
+    font-size: 1.2rem;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #5a5a89;
+}
+
+.platformName {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    .card {
+        max-width: 90%; /* Make card width responsive */
+        padding: 1rem;
+    }
+
+    .cardTitle {
+        font-size: 1.2rem;
+    }
+
+    .cardBio {
+        font-size: 0.85rem;
+    }
+
+    .socialLinks {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

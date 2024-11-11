@@ -1,0 +1,55 @@
+.heroSection {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroSection canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.heroContent {
+  text-align: center;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 1rem;
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  color: var(--primary-text-color);
+  margin-bottom: 2rem;
+}
+
+.heroButton {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: var(--button-bg-color);
+  color: var(--primary-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: var(--button-hover-color);
+}
+/* ... (other styles) */
+
+.heroTitle {
+  font-size: 3rem;
+  color: var(--secondary-text-color); /* Use your secondary text color */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px var(--secondary-text-color); /* Add a subtle glow */
+}
