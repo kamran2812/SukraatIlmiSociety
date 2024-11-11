@@ -1,0 +1,112 @@
+:root {
+    /* Color Scheme */
+    --background-color: #0D1B2A; /* Dark Navy */
+    --body-bg-color: #f5f5f5b8; /* Very Light Grey for better readability */
+    --primary-text-color: #f5f5f5d4; /* Very Light Grey for better readability */
+    --secondary-text-color: #C0B283; /* Classic Gold - a richer tone */
+    --accent-color: #2A9D8F; /* Teal Green */
+    --button-bg-color: #132940; /* Deep Charcoal Blue for depth */
+    --button-hover-color: #3C5C67; /* Rich Slate Blue for elegance */
+}
+
+.footer {
+    background-color: #2c3e50; /* Change to a darker blue color */
+    color: var(--primary-text-color); /* Light text color for contrast */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.about {
+    text-align: left;
+}
+
+/* Add heading color style */
+.footer h3 {
+    color: var(--primary-text-color); /* Primary text color for headings */
+}
+
+/* Add paragraph color style */
+.footer p {
+    color: var(--secondary-text-color); /* Secondary text color for paragraph text */
+}
+
+.social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social a {
+    color: var(--primary-text-color); /* Change icon color to match text color */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: var(--accent-color); /* Accent color on hover */
+}
+
+.newsletter p {
+    margin-bottom: 10px;
+}
+
+.newsletter form {
+    display: flex;
+    /* Space between input and button */
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    flex: 1; /* Grow to occupy available space */
+}
+
+.newsletter button {
+    padding: 15px;
+    background-color: #3498db; /* Change button background color */
+    color: var(--primary-text-color); /* Button text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.quote p:first-child {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    background-color: var(--button-bg-color); /* Set your desired background color */
+    color: var(--primary-text-color); /* Set your desired text color */
+    text-align: center; /* Center the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Add padding to top and bottom */
+    font-size: 1.2rem; /* Adjust font size if needed */
+}
